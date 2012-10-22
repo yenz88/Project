@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{termcal}
+\usepackage[colorlinks=true,pagebackref,linkcolor=blue]{hyperref}
+%\textwidth=7in
+\textheight=9.5in
+\topmargin=-1in
+\headheight=0in
+\headsep=.5in
+\hoffset  -.85in
+
+\pagestyle{empty}
+
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+
+\newcommand{\MWClass}{%
+\calday[Monday]{\classday} % Monday
+\calday[Tuesday]{\classday} % Tuesday
+\calday[Wednesday]{\classday} % Wednesday
+\calday[Thursday]{\classday} % Thursday
+\calday[Friday]{\classday}
+\skipday\skipday 
+}
+
+\newcommand{\TRClass}{%
+\skipday % Monday (no class)
+\calday[Tuesday]{\classday} % Tuesday
+\skipday % Wednesday (no class)
+\calday[Thursday]{\classday} % Thursday
+\skipday % Friday 
+\skipday\skipday % weekend (no class)
+}
+
+\newcommand{\Holiday}[2]{%
+\options{#1}{\noclassday}
+\caltext{#1}{#2}
+}
+
+\begin{document}
+
+\begin{center}
+{\bf AMS 550.400 \quad Tentative Schedule \quad  Yen}\\
+\vskip.2in
+{\footnotesize Last Compiled on \today}
+\end{center}
+\setlength{\unitlength}{1in}
+\begin{picture}(3,.1) 
+\put(0,0) {\line(1,0){5.35}}         
+\end{picture}
+
+\renewcommand{\arraystretch}{2}
+
+\hoffset  0in
+\begin{center}
+\begin{calendar}{10/22/2012}{7} 
+    \centering
+\setlength{\calboxdepth}{.5in}
+\MWClass
+% Meetings
+\Holiday{10/24/2012}{{Meeting}}
+\Holiday{10/31/2012}{{Meeting}}
+\Holiday{11/7/2012}{{Meeting}}
+\Holiday{11/14/2012}{{Meeting}}
+\Holiday{11/28/2012}{{Meeting}}
+\Holiday{12/5/2012}{{Meeting}}
+
+%Deliverables 
+\Holiday{10/26/2012}{\emph{Due: Initial experiments and data table}}
+\Holiday{11/2/2012}{\emph{Due: Finalized data table and matlab code}}
+\Holiday{11/9/2012}{\emph{Due: Finalized matlab code and R package}}
+
+% Class submision due dates
+\Holiday{10/24/2012}{\emph{Due: Work Statement}}
+\Holiday{11/5/2012}{\emph{Due: Progress Report}}
+\Holiday{11/21/2012}{\emph{Thanksgiving Break}}
+\Holiday{11/22/2012}{\emph{Thanksgiving Break}}
+\Holiday{11/23/2012}{\emph{Thanksgiving Break}}
+\Holiday{11/16/2012}{\emph{Due: Final Presentation}}
+\Holiday{11/30/2012}{\emph{Due: Final Report}}
+\Holiday{12/7/2012}{\emph{Due: Final Deliverables}}
+%\caltexton{1}{}
+%\caltextnext{Argument From Scale}    
+% ... and so on
+\end{calendar}
+\end{center}
+\end{document}
