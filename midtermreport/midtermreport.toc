@@ -1,7 +1,7 @@
 \contentsline {chapter}{Abstract}{2}
 \contentsline {chapter}{Acknowledgments}{3}
-\contentsline {chapter}{\numberline {A}Lemmas}{7}
-\contentsline {chapter}{\numberline {B}Glossary}{8}
-\contentsline {chapter}{\numberline {C}Abbreviations}{9}
+\contentsline {chapter}{\numberline {A}Lemmas}{8}
+\contentsline {chapter}{\numberline {B}Glossary}{9}
+\contentsline {chapter}{\numberline {C}Abbreviations}{10}
 \contentsline {chapter}{REFERENCES}{}
-\contentsline {chapter}{Selected Bibliography Including Cited Works}{10}
+\contentsline {chapter}{Selected Bibliography Including Cited Works}{11}

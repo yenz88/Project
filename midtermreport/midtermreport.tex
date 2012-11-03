@@ -137,8 +137,85 @@ Date: Last Complied on \today
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \listoftables
+\vspace{6pt}
 
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &25\% &50\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 25 & 32\\ 
+\hline  
+t=2 mins & 14 & 24 & 34\\ 
+\hline  
+t=5 mins & 14 & 27 & 31\\ 
+\hline  
+t=30 mins & 18 & 36 & 18\\ 
+\hline  
+   
+ \end{tabular}
 
+\caption{Experiment results for Coke}
+
+\end{table}
+
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &25\% &50\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 27 & 30\\ 
+\hline  
+t=2 mins & 20 & 19 & 33\\ 
+\hline  
+t=5 mins & 14 & 29 & 29\\ 
+\hline  
+t=30 mins & 17 & 30 & 25\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Sprite}
+
+\end{table}
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &25\% &50\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 23 & 34\\ 
+\hline  
+t=2 mins & 19 & 23 & 30\\ 
+\hline  
+t=5 mins & 18 & 27 & 27\\ 
+\hline  
+t=30 mins & 12 & 35 & 25\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Fanta Orange}
+
+\end{table}
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &25\% &50\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 24 & 33\\ 
+\hline  
+t=2 mins & 21& 19 & 32\\ 
+\hline  
+t=5 mins & 16 & 24 & 32\\ 
+\hline  
+t=30 mins & 18 & 22& 32\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Diet Coke}
+
+\end{table}
 
 \renewcommand{\thefootnote}{\arabic{footnote}}
 \setcounter{footnote}{0}
@@ -163,59 +240,26 @@ Date: Last Complied on \today
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 
 \chapter{Lemmas}\label{Lemma}
+\vspace{12pt} 
+
+q=mCdeltaT,
+\\*  where C stands for specific heat capacity (J/g ºC)
+\\* q is quantity of heat in joules 
+\\* m = mass in grams
+\\* delta T= change is temp
+\\*  so C= q/(m*delta T)
 
 \chapter{Glossary}\label{Glossary}
 
 \vspace{12pt} 
 
 \vspace{8pt}
-\noindent {\bf Ascending node}. The point where the satellite crosses through
-the equatorial plane in a northerly direction. 
+\noindent {\bf Specific heat capacity}. Amount of heat per unit mass required to raise the temperature by one degree Celsius
 
-\vspace{8pt}
-\noindent {\bf Earth-centered inertial frame}. A frame of reference whose origin is the center of the earth and which does not rotate with respect to inertial space.
-
-\vspace{8pt}
-\noindent {\bf Earth-centered rotating frame}. A frame of reference whose origin is the center of the earth but which rotates with the earth. 
-
-\vspace{8pt} \noindent {\bf Footprint}. The intersection of a visibility cone with the surface of the earth.
-
-\vspace{8pt} \noindent {\bf Great circle of arc}. The shortest path between two points on the surface of the earth. 
-
-\vspace{8pt} \noindent {\bf Groundtrack}.The location of the center of a visibility cone footprint on the surface of the earth.
-
-\vspace{8pt}
-\noindent {\bf Inclination}.  The angle between the normal to the orbit plane
-and the normal to the equatorial plane.
-
-\vspace{8pt} \noindent {\bf LEO}. An orbit with an altitude approximately below 2,000 km.
-
-\vspace{8pt} \noindent {\bf Molniya orbit}. A highly elliptical orbit with an orbital period of half a day.
-
-\vspace{8pt} \noindent {\bf Projection distance}. The distance between the center of the visibility cone footprint and a point of interest projected onto the plane orthogonal to the vector defining the visibility cone center and tangent to the earth surface.
-
-\vspace{8pt}
-\noindent {\bf Right ascension of the ascending node}. The angle
-between the unit vector $\bm{X}$ and the point where the satellite crosses the
-ascending node, measured counterclockwise when viewed from the north side of
-the equatorial plane.
-
+\noindent {\bf Heat of fusion}. Amount of heat needed to change its state from a solid to a liquid per unit mass
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \chapter{Abbreviations}\label{Abbreviations}
-
-
-\noindent ECI.  Earth-centered inertial frame
-
-\vspace{5pt}
-
-\noindent ECR.  Earth-centered rotating frame
-
-\vspace{5pt}
-
-\noindent LEO.  Low Earth Orbit  
-
-\vspace{5pt}
 
 \noindent RAAN. Right ascension of the ascending node
 
