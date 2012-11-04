@@ -253,9 +253,61 @@ Selling soft drinks is a significant portion of McDonald's business, be it as a 
 \prefacesection{Analysis}
 
 Initial Analysis
+\vspace{24pt}
+Table 1, 2, 3, and 4 shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively. The rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
+
 \vspace{12pt}
-\\* Based on our experimental results collected, we can see a clear trend across all four drinks at each point in time. At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), the subjects experienced the most satisfaction. 
-\\* At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. 
+Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), gave the subjects the most satisfaction. This is likely because, 30 seconds after the soda is mixed with the ice, 
+
+\vspace{12pt}
+At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. 
+
+
+\vspace{24pt}
+
+
+\newpage
+Theoretical Analysis
+
+\vspace{12pt}
+
+Assumptions and terms: 
+\begin{itemize}
+\item (dilution, temp) = SHC(vsoda,vice, w)
+\item vsoda=volume of soda in cm3, Assume density of soda is 1g/cm3
+\item vice=volume of ice in cm3, Assume density of ice is 0.9167g/cm3 = density
+\item w=specific heat capacity of soda in J
+\item specfic heat capacity of water = 4.1813J/g/K = watershc
+\item specific heat of fusion = 334J/g = fusion
+\item ice is 0 degrees Celsius, soda is 25 degrees Celsius 
+\item dilution is dilution of resulting solution
+\item temp is resulting temperature of solution in Celsius
+\item room temperature = 25 = t
+\end{itemize}
+
+\vspace{12pt}
+Mass of ice: 
+\begin{itemize}
+ \item vice=vice*density;
+\end{itemize}
+
+\vspace{12pt}
+Dilution:
+\begin{itemize}
+\item dilution=vice/vsoda;
+\end{itemize}
+
+\vspace{12pt}
+Energy needed to melt ice:
+\begin{itemize}
+\item energymelt=334*vice;
+\end{itemize}
+
+\vspace{12pt}
+Resulting final temperature:
+\begin{itemize}
+\item temp=(t*vsoda*w-energymelt)/(watershc*vice+vsoda*w);
+\end{itemize}
 
 %\include{E_Results}
 
