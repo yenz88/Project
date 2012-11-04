@@ -4,10 +4,8 @@
 \contentsline {chapter}{Technical Background}{9}
 \contentsline {chapter}{Problem Statement}{10}
 \contentsline {chapter}{Analysis}{11}
-\contentsline {chapter}{Results}{13}
-\contentsline {chapter}{Conclusion}{14}
-\contentsline {chapter}{\numberline {A}Lemmas}{15}
-\contentsline {chapter}{\numberline {B}Glossary}{16}
-\contentsline {chapter}{\numberline {C}Abbreviations}{17}
+\contentsline {chapter}{\numberline {A}Lemmas}{13}
+\contentsline {chapter}{\numberline {B}Glossary}{14}
+\contentsline {chapter}{\numberline {C}Abbreviations}{15}
 \contentsline {chapter}{REFERENCES}{}
-\contentsline {chapter}{Selected Bibliography Including Cited Works}{18}
+\contentsline {chapter}{Selected Bibliography Including Cited Works}{16}
