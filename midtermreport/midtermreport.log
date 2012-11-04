@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 NOV 2012 17:23
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012) (format=pdflatex 2012.6.30)  4 NOV 2012 17:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -344,52 +344,46 @@ ng>] [2
 
  [4
 
-] (./midtermreport.lof)
-\tf@lof=\write4
-\openout4 = `midtermreport.lof'.
-
- [5
-
 ] (./midtermreport.lot)
-\tf@lot=\write5
-\openout5 = `midtermreport.lot'.
+\tf@lot=\write4
+\openout4 = `midtermreport.lot'.
 
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[6
+[5
 
-] [7] [8
+] [6] [7
+
+] [8
 
 ] [9
 
 ] [10
 
-] [11
-
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 285.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 294.
 
 
 (/usr/local/texlive/2012/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 285.
- [12]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 294.
+ [11]
 Appendix A.
 Missing character: There is no Â in font cmr10!
 Missing character: There is no º in font cmr10!
-[13
+[12
 
 ]
 Appendix B.
-[14
+[13
 
 ]
 Appendix C.
-[15
+[14
 
 ] (./midtermreport.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 4--10
@@ -438,21 +432,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--59
 
  []
 
-[16
+[15
 
-]) [17] (./midtermreport.aux)
+]) [16] (./midtermreport.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3972 strings out of 493488
- 58157 string characters out of 3141326
+ 3969 strings out of 493488
+ 58117 string characters out of 3141326
  122270 words of memory out of 3000000
  7180 multiletter control sequences out of 15000+200000
  15778 words of font info for 58 fonts, out of 3000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,7n,38p,1611b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,7n,38p,1420b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
 </usr/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></
@@ -462,10 +456,10 @@ r/local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 local/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/lo
 cal/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loc
 al/texlive/2012/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on midtermreport.pdf (17 pages, 147382 bytes).
+Output written on midtermreport.pdf (16 pages, 148207 bytes).
 PDF statistics:
- 96 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
+ 93 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

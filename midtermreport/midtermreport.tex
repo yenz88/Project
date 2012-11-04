@@ -94,7 +94,7 @@
 Yen Theng Tan \\
 \texttt{yen@jhu.edu} \\
 \vspace{10pt}
-Joyce Tan 
+Joyce Tan \\
 \texttt{jtan21@jhu.edu}
 
 % INSTRUCTOR
@@ -124,16 +124,25 @@ Date: Last Complied on \today
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Abstract}
 
+McDonald's Corporation is the world's largest chain of hamburger fastfood restaurants, and selling soft drinks is a significant portion of McDonald's business. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or warmer drink for the customer. Our task is to provide a suggestion for the optimal amount of ice for soda, such that the average consumer will be most satisfied. We approach this problem by first creating an experiment that measures consumer preferences to the amount of ice in a large McDonald's cup, and different points in time after the ice is initially mixed with the soda. The collected data is statistically analyzed to give us an idea of the optimal amount of ice to be added. Secondly, we calculate the different temperatures and the amount of dilution of the resulting drink, using specific heat capacities of soda and ice. This can be used complementary to our first experiment to provide more theoretical reasonings behind any trends or conclusions. 
+
+
 % Begin ACKNOWLEDGMENTS
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Acknowledgments}
+
+\vspace{12pt}
+We would like to acknowledge McDonald's Corporation for their support of our project. 
+
+\vspace{12pt}
+We would also like to acknowledge Dr.~N.~.H.~Lee, our course professor in the Mathematical Modeling and Consulting class at Johns Hopkins University, without whom we would not have had the tools and feedback necessary to complete this project. 
 
 % Table of contents, List of Figures, and List of Tables.
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \tableofcontents
 
-\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\listoffigures
+%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+%\listoffigures
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \listoftables
@@ -236,8 +245,8 @@ No meal is complete without a drink; and from Diet Coke to low-fat milk to fresh
 \prefacesection{Technical Background}
 
 Firstly, we have a few assumptions on hand in order to simplify this problem. We assume that the consumer's taste depends entirely on the dilution and temperature of the drink. Also, any sample group that we use represents the population's preferences accurately.
-\\* We are interested in approaching this problem using 2 different methods. The first method would be experimenting with different types of soda, and different amounts of ice to find out the optimal proportion of ice to soda. Using different proportions of ice, we will then measure the resulting temperature of the drink, as well as calculate the resulting dilution of the drink. We are also narrowing down the scope of our experiment to 4 of the most popular drinks in McDonalds' - Coca Cola, Sprite, Fanta Orange, and Diet Coke. By experimenting, we will test out which combination of temperature and dilution will yield the highest satisfaction from the test subjects. Over the course of 4 days, we will give the test subject 4 different cups of the same drink with different labels A, B, C, D. Additionally, we will take measurements four times a day, thereby including a time parameter of t=30seconds, 2 minutes, 5 minutes, t=infinity, which indicates the time elapsed after the ice is mixed with the drink. The different labels represent different ice proportions, and the test subject is allowed to sip the drink at time=t, assuming the ice is placed in the drink at t=0. On the same day, we will do the same test with the 3 other sodas, an hour apart. The cups are given an hour apart, so that the previous cup will not affect any judgement on the following drink. The test subject will then choose their favorite cup each round. We will tabulate the preferences of the entire sample group, and provide a conclusion about the consumer's preferred ice proportion in each soda drink.
-\\* If time permits, we would be looking to approach from an alternative method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. We can then compare this to the actual values obtained in the first approach, and see if they are pretty similar. This can also tell us more about the effect of the environment (heat loss to surrounding air and cup). This will be mainly a supporting tool and not used in place of the first approach.
+\\* We are interested in approaching this problem using 2 different methods. The first method would be experimenting with different types of soda, and different amounts of ice to find out the optimal proportion of ice to soda. Using different proportions of ice, we will then measure the resulting temperature of the drink, as well as calculate the resulting dilution of the drink. We are also narrowing down the scope of our experiment to 4 of the most popular drinks in McDonalds' - Coca Cola, Sprite, Fanta Orange, and Diet Coke. By experimenting, we will test out which combination of temperature and dilution will yield the highest satisfaction from the test subjects. Over the course of 4 days, we will give the test subject 4 different cups of the same drink with different labels A, B, C, D. Additionally, we will take measurements four times a day, thereby including a time parameter of t=30seconds, 2 minutes, 5 minutes, t=30 minutes, which indicates the time elapsed after the ice is mixed with the drink. The different labels represent different ice proportions, and the test subject is allowed to sip the drink at time=t, assuming the ice is placed in the drink at t=0. On the same day, we will do the same test with the 3 other sodas. We will tabulate the preferences of the entire sample group, and provide a conclusion about the consumer's preferred ice proportion in each soda drink.
+\\* We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. We can then compare this to the actual values obtained in the first approach, and see if they are pretty similar. This can also tell us more about the effect of the environment (heat loss to surrounding air and cup). This will be mainly a supporting tool and not used in place of the first approach.
 
 %\include{C_ProblemStatement}
 
