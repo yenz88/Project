@@ -1,0 +1,391 @@
+\documentclass[oneside,12pt]{report}  
+
+% the dimensions of the page
+\textheight=9.25in \topmargin=-0.5in   %See note in Chapter 8 of Sample Report about "Page scaling" option in Adobe
+\textwidth=6.0in
+\oddsidemargin=0.3in
+\evensidemargin=0.3in  % Needed to balance even and odd pages in twoside print copy
+
+
+% Useful packages
+\usepackage{dtklogos}
+\usepackage{amsmath}
+\usepackage{bm}
+%\usepackage[colorlinks=true,pagebackref,linkcolor=blue]{hyperref}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{graphicx, subfigure}
+\usepackage{caption}
+\usepackage{excludeonly}
+
+\usepackage{graphicx} 
+
+%\usepackage{doc}
+%% Following sets up logic and formatting for conditional twoside copying
+%\usepackage{ifthen, color, fancyvrb}
+%\usepackage{nextpage}\pagestyle{plain}
+%\newcommand\myclearpage{\cleartooddpage
+%  [\thispagestyle{empty}]
+%  }
+
+\DeclareMathOperator*{\argmin}{arg\ min}
+\DeclareMathOperator*{\sign}{sign}
+
+% Note special alternative codes for using TWO bibliographies; see cautionary note in
+\DeclareGraphicsExtensions{ps,eps,PNG,png}
+
+% Theorem-like command definitions:
+\newtheorem{theorem}{Theorem}[chapter]
+\newtheorem{lemma}{Lemma}[chapter]
+\newtheorem{definition}{Definition}  % Note, this italicizes everything
+
+% Print the chapter and sections in the toc
+\setcounter{tocdepth}{1}
+
+% Specify which files to typeset for this run (note that overall pagination is preserved)
+%\includeonly{chapter1, chapter2}
+% Specify which files NOT to typeset for this run (note that overall pagination is preserved)
+%\excludeonly{}
+
+% Groundwork for allowing double-sided copying with blank versos
+\def\prefacesection#1{
+\chapter*{#1}
+\addcontentsline{toc}{chapter}{#1}
+}
+
+\begin{document}
+
+
+\def\thefootnote{\fnsymbol{footnote}}
+
+\thispagestyle{empty}
+
+% The numbers below controls the amount of space between the following sections
+\def\shiftdowna{0.32in}  % Adjust for balance
+\def\shiftdownb{0.22in}  % Adjust for balance
+
+% Set up the boiler plate at the top of the page
+
+\begin{center}
+\textbf{{\large Mathematical Modeling and Consulting }}\\
+
+\vspace \shiftdowna
+\includegraphics[width=0.5\textwidth]{jhu.png}\\
+
+% Home Department
+\vspace \shiftdowna
+\underline {Sponsor}\\ 
+\vspace{5pt}
+\textbf{\large McDonald's Corporation} \\
+\vspace\shiftdowna
+\textbf{{Final Report}}
+
+% TITLE
+\vspace \shiftdowna
+\textbf{{\Large How Much Ice Do You Need?}}
+
+% STUDENTS
+\vspace{0.35in}
+\underline {Team Members}\\
+\vspace{5pt}
+Yen Theng Tan \\
+\texttt{yen@jhu.edu} \\
+\vspace{10pt}
+Joyce Tan \\
+\texttt{jtan21@jhu.edu}
+
+% INSTRUCTOR
+\vspace \shiftdownb
+\underline {Academic Mentor} \\
+\vspace{5pt}
+\text{Dr.~N.~.H.~Lee}, Applied Mathematics and Statistics\\
+\texttt{nhlee@jhu.edu}
+
+% Consultants
+%\vspace \shiftdownb 
+%\underline {Consultant}\\
+%\vspace{5pt}
+%Jason Bourne\\
+
+% DATE
+\vspace \shiftdowna
+Date: Last Complied on \today
+
+\end{center}
+
+\vfill  %Fill page to force following note to bottom
+\footnoterule
+\noindent \small{This project was supported by McDonald's Corporation.}
+
+% Begin ABSTRACT
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Abstract}
+
+McDonald's Corporation is the world's largest chain of hamburger fastfood restaurants, and selling soft drinks is a significant portion of McDonald's business. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or warmer drink for the customer. Our task is to provide a suggestion for the optimal amount of ice for soda, such that the average consumer will be most satisfied. We approach this problem by first creating an experiment that measures consumer preferences to the amount of ice in a large McDonald's cup, and different points in time after the ice is initially mixed with the soda. The collected data is statistically analyzed to give us an idea of the optimal amount of ice to be added. Secondly, we calculate the different temperatures and the amount of dilution of the resulting drink, using specific heat capacities of soda and ice. This can be used complementary to our first experiment to provide more theoretical reasonings behind any trends or conclusions. 
+
+
+% Begin ACKNOWLEDGMENTS
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Acknowledgments}
+
+\vspace{12pt}
+We would like to acknowledge McDonald's Corporation for their support of our project. 
+
+\vspace{12pt}
+We would also like to acknowledge Dr.~N.~.H.~Lee, our course professor in the Mathematical Modeling and Consulting class at Johns Hopkins University, without whom we would not have had the tools and feedback necessary to complete this project. 
+
+% Table of contents, List of Figures, and List of Tables.
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\tableofcontents
+
+%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+%\listoffigures
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\listoftables
+\vspace{6pt}
+
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &40\% &60\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 25 & 32\\ 
+\hline  
+t=2 mins & 14 & 24 & 34\\ 
+\hline  
+t=5 mins & 14 & 27 & 31\\ 
+\hline  
+t=30 mins & 18 & 36 & 18\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Coke}
+
+\end{table}
+
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &40\% &60\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 27 & 30\\ 
+\hline  
+t=2 mins & 20 & 19 & 33\\ 
+\hline  
+t=5 mins & 14 & 29 & 29\\ 
+\hline  
+t=30 mins & 17 & 30 & 25\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Sprite}
+
+\end{table}
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &40\% &60\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 23 & 34\\ 
+\hline  
+t=2 mins & 19 & 23 & 30\\ 
+\hline  
+t=5 mins & 18 & 27 & 27\\ 
+\hline  
+t=30 mins & 12 & 35 & 25\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Fanta Orange}
+
+\end{table}
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c|c|c }
+  &40\% &60\% & 75\%  \\
+\hline  
+t=0.5 mins & 15 & 24 & 33\\ 
+\hline  
+t=2 mins & 21& 19 & 32\\ 
+\hline  
+t=5 mins & 16 & 24 & 32\\ 
+\hline  
+t=30 mins & 18 & 22& 32\\ 
+\hline  
+   
+ \end{tabular}
+
+\caption{Experiment results for Diet Coke}
+
+\end{table}
+
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setcounter{footnote}{0}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+%\include{A_Introduction}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Introduction}
+
+McDonald's Corporation is the world's largest chain of hamburger fastfood restaurants, serving around 68 million customers daily in 119 countries. Mcdonald's primarily sells hamburgers, cheeseburgers, chicken, French fries, breakfast items, soft drinks, milkshakes and desserts. 
+No meal is complete without a drink; and from Diet Coke to low-fat milk to fresh-brewed, hot coffee, McDonald's serves many different varieties of beverages. 
+\\* Given that soft drinks are normally assumed to be the perfect accompaniment to a fast food meal, their temperature is also essential to the overall satisfaction of the consumer. We have been tasked by McDonald's to find the optimal amount of ice to put into their standard large size cups, and the provide them with data on consumer satisfaction as time elapses. 
+
+%\include{B_TechnicalBackground}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Technical Background}
+
+Firstly, we have a few assumptions on hand in order to simplify this problem. We assume that the consumer's taste depends entirely on the dilution and temperature of the drink. Since both the dilution and temperature of the drink rely entirely on the ice proportion, these two values would come hand-in-hand. Also, any sample group that we use represents the population's preferences accurately. Only a similar note, the 4 different time parameterrs which we perform the experiment is sufficient to represent the overall satisfaction the customer has with the drink.
+\\* We are interested in approaching this problem using 2 different methods. The first method would be experimenting with the 4 most popular types of soda at McDonald's, namely Coca Cola, Fanta Orange, Sprite and Diet Coke. Then we would experiment and gauge the satisfaction of the test subjects by experimenting with different amounts of ice to find out the optimal proportion of ice to soda. 
+\\* This experiment will take place over the course of 4 days, where we will each drink will be tested on each day. For each time parameter, we will give the test subject 3 different cups (labelled A, B and C) with different ice proportions in them (40\%, 60\%, 75\%) we will give the test subject 4 different cups of the same drink with different labels A, B, C, D. Additionally, we will take measurements four times a day, thereby including a time parameter of t=30seconds, 2 minutes, 5 minutes, t=30 minutes, which indicates the time elapsed after the ice is mixed with the drink. The different labels represent different ice proportions, and the test subject is allowed to sip the drink at time=t, assuming the ice is placed in the drink at t=0. On the same day, we will do the same test with the 3 other sodas. We will tabulate the preferences of the entire sample group, and provide a conclusion about the consumer's preferred ice proportion in each soda drink.
+\\* We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. We can then compare this to the actual values obtained in the first approach, and see if they are pretty similar. This can also tell us more about the effect of the environment (heat loss to surrounding air and cup). This will be mainly a supporting tool and not used in place of the first approach.
+
+%\include{C_ProblemStatement}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Problem Statement}
+
+Selling soft drinks is a significant portion of McDonald's business, be it as a thirst quencher, or as part of the extra value meal. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or overly cold drink for the customer. This is likely to lower overall customer satisfaction, since a drink is a significant complement to a meal. Thus, customers are likely to appreciate if the right amount of ice was added for optimal satisfaction.
+\\* To further define this problem, the exogenous variables are the proportion of ice to put in a drink. The endogenous variable would be the resulting temperature and concentration of the drink, as we are assuming that a customer's satisfaction is affected only by the temperature and concentration of the drink.
+
+%\include{D_Analysis}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Analysis}
+
+Initial Analysis
+
+\vspace{24pt}
+Table 1, 2, 3, and 4 shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively. The rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
+
+\vspace{12pt}
+Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. 
+
+\vspace{12pt}
+At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), gave the subjects the most satisfaction. This is likely because, at 30 seconds after the soda is mixed with the ice, the soda is chilled the fastest with the most ice, and little dilution occurs. 
+
+\vspace{12pt}
+At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. This is reasonable, given that the ice still has not diluted much, and the most ice would still chill the drink the most and provide the most satisfaction. 
+
+\vspace{12pt}
+At t = 5 minutes, we see a split preference between 60\% and 75\%. At 5 minutes, more of the ice has dissolved, and dilution in both cups are likely the same given that their temperature is also roughly equal. The continued low satisfaction for 40\% is likely due to the lack of chilling effect of this low quantity of ice.
+
+\vspace{12pt}
+At t = 30 minutes, we can assume that most of the ice have dissolved, and the resulting dilution from the ice is very high. The more ice there is, the more diluted the soda is. Thus we see a decline in satisfaction for the 75\% cup. It is still more satisfying than the 40\% cup though, probably because it still manages to maintain its coldness, whereas the 40\% cup is likely less chilled. 
+
+\vspace{24pt}
+
+
+\newpage
+Theoretical Analysis
+
+\vspace{12pt}
+
+Assumptions and terms: 
+\begin{itemize}
+\item (dilution, temp) = SHC(vsoda,vice, w)
+\item vsoda=volume of soda in cm3, Assume density of soda is 1g/cm3
+\item vice=volume of ice in cm3, Assume density of ice is 0.9167g/cm3 = density
+\item w=specific heat capacity of soda in J
+\item specfic heat capacity of water = 4.1813J/g/K = watershc
+\item specific heat of fusion = 334J/g = fusion
+\item ice is 0 degrees Celsius, soda is 25 degrees Celsius 
+\item dilution is dilution of resulting solution
+\item temp is resulting temperature of solution in Celsius
+\item room temperature = 25 = t
+\end{itemize}
+
+\vspace{12pt}
+Mass of ice: 
+\begin{itemize}
+ \item vice=vice*density;
+\end{itemize}
+
+\vspace{12pt}
+Dilution:
+\begin{itemize}
+\item dilution=vice/vsoda;
+\end{itemize}
+
+\vspace{12pt}
+Energy needed to melt ice:
+\begin{itemize}
+\item energymelt=334*vice;
+\end{itemize}
+
+\vspace{12pt}
+Resulting final temperature:
+\begin{itemize}
+\item temp=(t*vsoda*w-energymelt)/(watershc*vice+vsoda*w);
+\end{itemize}
+
+%\include{E_Results}
+
+%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+%\prefacesection{Results}
+
+%\include{F_Conclusion}
+
+%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+%\prefacesection{Conclusion}
+
+%\include{chapter1}
+%\include{chapter2}
+%\include{chapter3}
+%\include{chapter4}
+%\include{chapter5}
+%\include{chapter6}
+
+
+\appendix
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+
+\chapter{Lemmas}\label{Lemma}
+\vspace{12pt} 
+
+q=mC$\Delta$T,
+\\*  where C = specific heat capacity (J/g ºC)
+\\* q = quantity of heat in joules 
+\\* m = mass in grams
+\\* $\Delta$T= change in temperature
+\\*  so C= q/(m*$\Delta$ T)
+
+\chapter{Glossary}\label{Glossary}
+
+\vspace{10pt} 
+
+\vspace{8pt}
+\noindent {\bf Specific heat capacity}. Amount of heat per unit mass required to raise the temperature by one degree Celsius
+
+\noindent {\bf Heat of fusion}. Amount of heat needed to change its state from a solid to a liquid per unit mass
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\chapter{Abbreviations}\label{Abbreviations}
+
+\noindent RAAN. Right ascension of the ascending node
+
+\vspace{5pt}
+
+%\endinput
+
+% Add your bibliography to Contents
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{\newpage}
+\addtocontents {toc}{\protect \contentsline {chapter}{REFERENCES}{}}
+\addcontentsline{toc}{chapter}{Selected Bibliography Including Cited Works}  
+
+% Bibliography must come last.
+\bibliographystyle{plain}
+\renewcommand\bibname{Selected Bibliography Including Cited Works}
+\nocite{*}  % List ALL references in your references, not just the ones cited in the text.
+% This scheme automatically alphabetizes the Bibliography.
+\bibliography{Biblio}
+\end{document}
