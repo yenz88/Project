@@ -446,6 +446,46 @@ Total & 134 & 253 & 261  \\
 \caption{Experimental Totals}
 \end{table}
 
+Tables 8, 9 ,10 and 11 shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively, but now with two added columns: the p-value, and the significance. As before, the rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
+
+The p-value is calculated using the Chi-Squared Test. The Chi-squared test is a statistical hypothesis test in which the sampling distribution of the test statistic is considered significant when the null hypothesis is true. The alternative hypothesis in this case is that the respondents (our test subjects) are \emph{indifferent} between the percentages of the cup being filled with ice. This means that 1/3 of respondents choose 40\%, 1/3 of the responsdents choose 60\% and the final 1/3 choose 75\% - as a whole subject population, they do not care how much ice is put in the cup. The null hypothesis is that there exists a bias, or a tendency towards one percentage than another. This null hypothesis would mean that we can observe a clear trend in the data being shown, and thus we can use the data presented. 
+
+\vspace{6pt}
+The significance threshold being used here is 0.05\%. This means that if the p-value calculated is less than 0.05, we can accept null hypothesis, and the data is considered significant. If the p-value calculated is greater than 0.05, we can reject the null hypothesis, and the data is considered less significant. 
+
+\vspace{6pt}
+Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. 
+
+\vspace{6pt}
+At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), gave the subjects the most satisfaction. This is likely because, at 30 seconds after the soda is mixed with the ice, the soda is chilled the fastest with the most ice, and little dilution occurs. Given that the sodas are not watered down by dilution yet, subjects enjoy the coldest of drinks, which in this case is the one with the most ice. 
+
+\vspace{6pt}
+At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. This is reasonable, given that the ice still has not diluted much, and the most ice would still chill the drink the most and provide the most satisfaction. 
+
+\vspace{6pt}
+At t = 5 minutes, we see a split preference between 60\% and 75\%. At 5 minutes, more of the ice has dissolved, and dilution in both cups are likely the same given that their temperatures are also roughly equal. The continued low satisfaction for 40\% is likely due to the lack of chilling effect of this low quantity of ice.
+
+\vspace{6pt}
+At t = 30 minutes, we can assume that much of the ice have dissolved, and the resulting dilution from the ice is very high. The more ice there is, the more diluted the soda is. Thus we see a decline in satisfaction for the 75\% cup. It is still more satisfying than the 40\% cup, probably because it still manages to maintain its coldness, whereas the 40\% cup is likely to be less chilled. 
+
+
+\newpage
+Theoretical Analysis
+
+\begin{figure}
+	\centering
+	\caption{Graph of Dilution and Temperature against different ice volumes}
+	\includegraphics[width=\textwidth]{extra/Graph.jpg}
+\end{figure}
+
+\vspace{12pt}
+Using the lemma under Appendix A, we are able to calculate the final temperature and dilution. This is assuming we have the ration of the volume of ice to soda. This is a different measuring scale from the experimental-based approach. In the experimental-based approach, the percentage is based on the height of a standard regular McDonald's cup. However, in this approach, we are using the ratio as exact absolute volume. Thus, we first calculate how much energy it would take melt the ice, and see how many degrees it would lower the temperature of the drink by. then, we calculate what is the temperature that the soda and melted ice would eventually converge to. Also, the dilution is would be calculated by finding the resulting volume of the melted ice (since ice has a lower density than water), and dividing that by the amount of soda.
+
+%\include{F_Conclusion}
+
+%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Conclusion}
+
 \begin{table}[ h]
 \centering
 \begin{tabular}{ l || c|c}
@@ -465,50 +505,11 @@ Total & 134 & 253 & 261  \\
 \caption{Calculated dilution and temperature for difference ice volumes}
 \end{table}
 
-\begin{figure}
-	\centering
-	\caption{Graph of Dilution and Temperature against different ice volumes}
-	\includegraphics[width=\textwidth]{extra/Graph.jpg}
-\end{figure}
-
-
-Tables 8, 9 ,10 and 11 shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively, but now with two added columns: the p-value, and the significance. As before, the rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
-
-The p-value is calculated using the Chi-Squared Test. The Chi-squared test is a statistical hypothesis test in which the sampling distribution of the test statistic is considered significant when the null hypothesis is true. The null hypothesis in this case is that there 
-
-
-meaning that the sampling distribution (if the null hypothesis is true) can be made to approximate a chi-squared distribution as closely as desired by making the sample size large enough.
-
-
-
-\vspace{12pt}
-Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. 
-
-\vspace{12pt}
-At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), gave the subjects the most satisfaction. This is likely because, at 30 seconds after the soda is mixed with the ice, the soda is chilled the fastest with the most ice, and little dilution occurs. 
-
-\vspace{12pt}
-At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. This is reasonable, given that the ice still has not diluted much, and the most ice would still chill the drink the most and provide the most satisfaction. 
-
-\vspace{12pt}
-At t = 5 minutes, we see a split preference between 60\% and 75\%. At 5 minutes, more of the ice has dissolved, and dilution in both cups are likely the same given that their temperature is also roughly equal. The continued low satisfaction for 40\% is likely due to the lack of chilling effect of this low quantity of ice.
-
-\vspace{12pt}
-At t = 30 minutes, we can assume that most of the ice have dissolved, and the resulting dilution from the ice is very high. The more ice there is, the more diluted the soda is. Thus we see a decline in satisfaction for the 75\% cup. It is still more satisfying than the 40\% cup though, probably because it still manages to maintain its coldness, whereas the 40\% cup is likely less chilled. 
-
 \vspace{24pt}
+Table 12 shows the compiled set of preferences for each soda. To get this table,  we summed up the preferences of each soda at each point in time (t = 0.5, 2, 5, 30 minutes), but taking into account only those data points that are considered significant. This allows us to measure only \emph{clear} trends in the data, and hence scrutinize those specific instances that exhibit an evident preference towards one amount of ice over another. 
 
-
-\newpage
-Theoretical Analysis
-
-\vspace{12pt}
-Using the lemma under Appendix A, we are able to calculate the final temperature and dilution. This is assuming we have the ration of the volume of ice to soda. This is a different measuring scale from the experimental-based approach. In the experimental-based approach, the percentage is based on the height of a standard regular McDonald's cup. However, in this approach, we are using the ratio as exact absolute volume. Thus, we first calculate how much energy it would take melt the ice, and see how many degrees it would lower the temperature of the drink by. then, we calculate what is the temperature that the soda and melted ice would eventually converge to. Also, the dilution is would be calculated by finding the resulting volume of the melted ice (since ice has a lower density than water), and dividing that by the amount of soda.
-
-%\include{F_Conclusion}
-
-%\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\prefacesection{Conclusion}
+\vspace{6pt}
+From this table, we can see that across all sodas, there is a clear disinclination towards the cup being filled 40\% with ice. However, between 60\% or 75\%, there is no clear 'winner' either. From this, we can con
 
 %\include{chapter1}
 %\include{chapter2}
