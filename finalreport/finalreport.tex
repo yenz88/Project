@@ -187,12 +187,41 @@ No meal is complete without a drink; and from Diet Coke to low-fat milk to fresh
 Selling soft drinks is a significant portion of McDonald's business, be it as a thirst quencher, or as part of the extra value meal. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or overly cold drink for the customer. This is likely to lower overall customer satisfaction, since a drink is a significant complement to a meal. Thus, customers are likely to appreciate if the right amount of ice was added for optimal satisfaction.
 \\* To further define this problem, the exogenous variables are the proportion of ice to put in a drink. The endogenous variable would be the resulting temperature and concentration of the drink, as we are assuming that a customer's satisfaction is affected only by the temperature and concentration of the drink.
 
-
-
 %\include{C_TechnicalBackground}
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Technical Background}
+To aid us in our analysis of the experiment that we plan to do, we will be using the Pearson's chi-squared test to test how significant our experiment results are. It tests a null hypothesis stating that the frequency distribution of certain events observe in a sample is consistent with a particular theoretical distribution. The events must be mutually exclusive and have total probability one.
+\\*The Pearson's chi-squared test is used to assess two types of comparisons: tests of goodness of fit and tests of independence. Ths first step is to calculate the chi-squared statistic $ X^2$, which resembles a normalized sum of squared deviations between observed and theoretical frequencies, as shown in Equation \eqref{chisqstat}
+\begin{align}
+X^2 &= \sum_{i=1}^{n} {\frac{(O_{i}-E_{i})^2}{E_{i}}} \label{chisqstat}
+\end{align}
+
+where $O_{i}$ is the observed frequency of category i being chosen,
+\\*$E_{i}$ is the expected theoretical frequency of category i being chosen,
+\\*$n$ is the number of different categories,
+
+\vskip3pt The second step is to determine the degrees of freedom, $d$, of that statistic, which is essentialy the number of frequencies reduced by the number of parameters of the fitted distribution. In the third step, $X^2$ is compared to the critical value of no significaned from the $\chi_{d}^{2}$ distribution, which usually gives a good approximation fo the distribution of $X^2$.
+\\* By comparing the $X^2$ statistic calculated in Equation \eqref{chisqstat} to the appropiate $\chi^{2}$distribution with $d$ degrees of freedom, we will obtain a p-value for the following null hypothesis.
+\vskip3pt $H_0$: All n categories are chosen with equal probability
+\vskip3pt $H_a$: All n ncateogires are chosen with unequal probability.
+\vskip3pt If the p-value is smaller than a given $\alpha$, it means that the result is not significant and that there is insufficient evidence to reject the null hypothesis that all n categories are chosen with equal probability. However, if the p-value is greater than $\alpha$, we have sufficient evidence to reject the null hypothesis and accept the alternative hypothesis.
+\vskip6pt
+
+There are a few assumptions in place when using the chi-squared test.
+\begin{itemize}
+\item The sample data is a simple random sample from a fixed distribution or population where each member of the population has an equal probability of selection. We have tried to achieve this assumption as much as possible by ensuring our sample group is as representative of the population by choosing test subjects from different backgrounds.
+\item Sample size is sufficiently big. This is to avoid committing a Type II error.
+\item Observations are assumed to be independent of each other. There is no correlation between the test subject's preferences in any way.
+
+
+\end{itemize}
+
+
+%\include{D_Methods}
+
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\prefacesection{Methods}
 
 Firstly, we have a few assumptions on hand in order to simplify this problem. We assume that the consumer's taste depends entirely on the dilution and temperature of the drink. Since both the dilution and temperature of the drink rely entirely on the ice proportion, these two values would come hand-in-hand. Also, any sample group that we use represents the population's preferences accurately. Only a similar note, the 4 different time parameterrs which we perform the experiment is sufficient to represent the overall satisfaction the customer has with the drink.
 \\* We are interested in approaching this problem using 2 different methods. The first method would be experimenting with the 4 most popular types of soda at McDonald's, namely Coca Cola, Fanta Orange, Sprite and Diet Coke. Then we would experiment and gauge the satisfaction of the test subjects by experimenting with different amounts of ice to find out the optimal proportion of ice to soda. 
@@ -242,7 +271,7 @@ t=30mins &1 &2 &3\\
  We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. This would not really tell us anything about preference of the population, but if provides more of a perspective on how different ice proportions affect temperatures and dilutions. However, this is purely theoretical since it does not take into account heat loss to the environment and cup. This will be mainly a supporting tool and not used in place of the first approach.
 
 
-%\include{D_Results}
+%\include{E_Results}
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Results}
@@ -344,7 +373,7 @@ t=30 mins & 18 & 22& 32\\
 \caption{Calculated dilution and temperature for difference ice volumes}
 \end{table}
 
-%\include{E_Analysis}
+%\include{F_Analysis}
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Analysis}
@@ -484,7 +513,7 @@ Using the lemmas under Appendix A, we are able to calculate the final temperatur
 
 Figure 1 is generated by plotting the data from table 12. These basically show a more theoretical approach, which asserts that as more ice is put in the soda, the temperature is further decreased, but the dilution is increased. This take-away from this theoretical result is congruent to those of our experimental results.  This analysis, and the generated trendline, is important because if our sponsor decides on a certain volume of ice to soda proportion and would like to find out the dilution and temperature effects, we can extropolate and further provide the desired calculations. 
 
-%\include{F_Conclusion}
+%\include{G_Conclusion}
 
 %\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Conclusion}
