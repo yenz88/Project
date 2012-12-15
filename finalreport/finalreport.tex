@@ -202,12 +202,13 @@ where $O_{i}$ is the observed frequency of category i being chosen,
 \\*$n$ is the number of different categories,
 
 \vskip3pt The second step is to determine the degrees of freedom, $d$, of that statistic, which is essentialy the number of frequencies reduced by the number of parameters of the fitted distribution. In the third step, $X^2$ is compared to the critical value of no significaned from the $\chi_{d}^{2}$ distribution, which usually gives a good approximation fo the distribution of $X^2$.
-\\* By comparing the $X^2$ statistic calculated in Equation \eqref{chisqstat} to the appropiate $\chi^{2}$distribution with $d$ degrees of freedom, we will obtain a p-value for the following null hypothesis.
-\vskip3pt $H_0$: All n categories are chosen with equal probability
+\\* By comparing the $X^2$ statistic calculated in Equation \eqref{chisqstat} to the appropiate $\chi^{2}$distribution with $d$ degrees of freedom, we will obtain a p-value. The p-value is the probability of obtaining a test statistic at least as extrememas the one that is actually observed, assuming the null hypothesis is true.
+\vskip6pt $H_0$: All n categories are chosen with equal probability
 \vskip3pt $H_a$: All n ncateogires are chosen with unequal probability.
-\vskip3pt If the p-value is smaller than a given $\alpha$, it means that the result is not significant and that there is insufficient evidence to reject the null hypothesis that all n categories are chosen with equal probability. However, if the p-value is greater than $\alpha$, we have sufficient evidence to reject the null hypothesis and accept the alternative hypothesis.
+\vskip6pt If the p-value is greater than a given $\alpha$, it means that the result is not that extremem assuming the null hypothesis is true. Thus, there is insufficient evidence to reject the null hypothesis that all n categories are chosen with equal probability. However, if the p-value is greater than $\alpha$, it means that observed result is too extreme assuming the null hypothesis is true. Thus, we have sufficient evidence to reject the null hypothesis and accept the alternative hypothesis.
 \vskip6pt
-
+While carrying out this test, we have to be wary of 2 statistical errors : Type I and Type II errors. Type I error is the incorrect rejection of a true null hypothesis (a false positive). The probaility of a Type I error is equal to the $\alpha$ that we use. Most statistical test usually use 0.05 for its $\alpha$. Type II error is seen as a false negative, where we accept the null hypothesis when it is not true. The probability of a Type II error is usually denoted by $\beta$. The power of a test is $1-\beta$.
+\vskip6pt
 There are a few assumptions in place when using the chi-squared test.
 \begin{itemize}
 \item The sample data is a simple random sample from a fixed distribution or population where each member of the population has an equal probability of selection. We have tried to achieve this assumption as much as possible by ensuring our sample group is as representative of the population by choosing test subjects from different backgrounds.
@@ -377,6 +378,20 @@ t=30 mins & 18 & 22& 32\\
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Analysis}
+
+We run the Pearson's chi-squared test on the results that we have obtain with the following null hypothesis.
+\vskip6pt $H_0$: The 3 different proportions are desired to an equal extent by the population.
+\vskip3pt $H_a$: The 3 different proportions are not desired to an equal extent by the population.
+\vskip6pt
+
+Since there are 72 points to be awarded (12 test subjects can give 6 points each), the expected score of each cup should be 72/3 = 24. These will be the $E_i$ for each of the 3 categories. Using Equation \eqref{chisqstat} and comparing it to a $\chi^2$ distribution with 2 degress of freedom, we can obtain a p-value. We choose $l\alpha$ to be 0.05. For a certain category, if the p-value is smaller than 0.05, the result is significant and we can reject the null hypothesis. Otherwise, the result is not significant and we do not reject the null hypothesis for that category.
+
+To compute the p-value we use the following R code in Listing \ref{chisq}
+\begin{lstlisting}[caption= R code for chi-squared test, label=chisq]
+x=c(a,b,c) #a,b,c represents the 3 data points for each time parameter and drink
+chisq.test(x)
+\end{lstlisting}
+
 
 \begin{table}[ h]
 \centering
@@ -603,6 +618,44 @@ end
 \end{lstlisting}
 \vspace{5pt}
 
+\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
+\chapter{R code}\label{R}
+\begin{lstlisting}[caption= R code for implementing Pearson's chi-squared test, label = Rcode]
+
+x=c(15,25,32)
+chisq.test(x)
+x=c(14,24,34)
+chisq.test(x)
+x=c(14,27,31)
+chisq.test(x)
+x=c(18,36,18)
+chisq.test(x)
+x=c(15,27,30)
+chisq.test(x)
+x=c(20, 19, 33)
+chisq.test(x)
+x=c(14, 29, 29)
+chisq.test(x)
+x=c(18, 36, 18)
+chisq.test(x)
+x=c(15,23,34)
+chisq.test(x)
+x=c(19,23,30)
+chisq.test(x)
+x=c(18,27,27)
+chisq.test(x)
+x=c(12,25,35)
+chisq.test(x)
+x=c(15,24,33)
+chisq.test(x)
+x=c(21,19,32)
+chisq.test(x)
+x=c(16,24,32)
+chisq.test(x)
+x=c(18,22,32)
+chisq.test(x)
+\end{lstlisting}
+\vspace{5pt}
 %\endinput
 
 % Add your bibliography to Contents

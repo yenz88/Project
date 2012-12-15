@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.28)  15 DEC 2012 17:46
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2012.11.28)  15 DEC 2012 18:13
 entering extended mode
 **C:/Users/home/Documents/JOHNS*HOPKINS!/2012/MODELLING/teamworkstatement/final
 report/finalreport.tex
@@ -422,47 +422,55 @@ report\finalreport.lot")
 
 ] [8
 
-] [9
+] [9] [10
 
-] [10]
+] [11]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[12
+
+] [13]
+LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 391.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[11
+[14
 
-] [12]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[13
-
-] [14] <extra/Graph.jpg, id=59, 548.80031pt x 334.24875pt>
+] [15] [16] <extra/Graph.jpg, id=67, 548.80031pt x 334.24875pt>
 File: extra/Graph.jpg Graphic file (type jpg)
 
 <use extra/Graph.jpg>
-Package pdftex.def Info: extra/Graph.jpg used on input line 508.
+Package pdftex.def Info: extra/Graph.jpg used on input line 523.
 (pdftex.def)             Requested size: 433.62pt x 264.10461pt.
- [15 <C:/Users/home/Documents/JOHNS HOPKINS!/2012/MODELLING/teamworkstatement/f
-inalreport/extra/Graph.jpg>] [16] [17
+ [17 <C:/Users/home/Documents/JOHNS HOPKINS!/2012/MODELLING/teamworkstatement/f
+inalreport/extra/Graph.jpg>] [18] [19
 
 ]
 Appendix A.
 Missing character: There is no Â in font cmbx10!
 Missing character: There is no º in font cmbx10!
-[18
+[20
 
 ]
 Appendix B.
-[19
+[21
 
 ]
 Appendix C.
-LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 579.
-[20
+[22
+
+]
+Appendix D.
+[23
 
 ]
 ("C:\Users\home\Documents\JOHNS HOPKINS!\2012\MODELLING\teamworkstatement\final
@@ -540,37 +548,38 @@ Underfull \hbox (badness 1484) in paragraph at lines 54--59
 ar time us-ing
  []
 
-[21
+[24
 
-]) [22]
+]) [25]
 ("C:\Users\home\Documents\JOHNS HOPKINS!\2012\MODELLING\teamworkstatement\final
 report\finalreport.aux") ) 
 Here is how much of TeX's memory you used:
- 6018 strings out of 493921
- 84995 string characters out of 3146482
- 184979 words of memory out of 3000000
- 9221 multiletter control sequences out of 15000+200000
- 16961 words of font info for 62 fonts, out of 3000000 for 9000
+ 6028 strings out of 493921
+ 85072 string characters out of 3146482
+ 186979 words of memory out of 3000000
+ 9230 multiletter control sequences out of 15000+200000
+ 17129 words of font info for 63 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 36i,10n,41p,1188b,1630s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,10n,41p,1188b,1651s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/Miktex/fonts/enc/dvips/cm-sup
 er/cm-super-ts1.enc}<C:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/
 cm/cmbx10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmb
 x12.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmbxti10.
 pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Prog
-ram Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fil
-es (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86
-)/Miktex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/Mikte
-x/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Miktex/fonts/
-type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/
-public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public
-/amsfonts/cm/cmtt10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsfo
-nts/cm/cmtt12.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/cm-super/sf
-rm1095.pfb>
-Output written on finalreport.pdf (22 pages, 270506 bytes).
+:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmitt10.pfb><C:/Pro
+gram Files (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program F
+iles (x86)/Miktex/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x
+86)/Miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/Mik
+tex/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/Miktex/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/Miktex/fonts/type1
+/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/publi
+c/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsf
+onts/cm/cmtt10.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/amsfonts/c
+m/cmtt12.pfb><C:/Program Files (x86)/Miktex/fonts/type1/public/cm-super/sfrm109
+5.pfb>
+Output written on finalreport.pdf (25 pages, 282578 bytes).
 PDF statistics:
- 132 PDF objects out of 1000 (max. 8388607)
+ 146 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 
