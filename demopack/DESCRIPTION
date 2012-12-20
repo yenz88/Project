@@ -1,9 +1,0 @@
-Package: demopack
-Type: Package
-Title: Mean and Standard Deviation of 100 Random Numbers
-Version: 1.0
-Date: 2012-10-22
-Author: Yen Theng Tan
-Maintainer: Yen <yen@jhu.edu>
-Description: This package returns the mean and standard deviation of a random set of 100 numbers 
-License: Yen's license!
