@@ -2,14 +2,12 @@
 \contentsline {chapter}{Acknowledgments}{3}
 \contentsline {chapter}{Introduction}{6}
 \contentsline {chapter}{Problem Statement}{7}
-\contentsline {chapter}{Technical Background}{8}
-\contentsline {chapter}{Methods}{10}
-\contentsline {chapter}{Results}{12}
-\contentsline {chapter}{Analysis}{14}
-\contentsline {chapter}{Conclusion}{19}
-\contentsline {chapter}{\numberline {A}Lemmas}{20}
-\contentsline {chapter}{\numberline {B}Glossary}{21}
-\contentsline {chapter}{\numberline {C}Matlab code}{22}
-\contentsline {chapter}{\numberline {D}R code}{23}
+\contentsline {chapter}{Approach}{8}
+\contentsline {chapter}{Results and analysis}{11}
+\contentsline {chapter}{Conclusion}{16}
+\contentsline {chapter}{\numberline {A}Lemmas}{17}
+\contentsline {chapter}{\numberline {B}Glossary}{18}
+\contentsline {chapter}{\numberline {C}Matlab code}{19}
+\contentsline {chapter}{\numberline {D}R code}{20}
 \contentsline {chapter}{REFERENCES}{}
-\contentsline {chapter}{Selected Bibliography Including Cited Works}{24}
+\contentsline {chapter}{Selected Bibliography Including Cited Works}{21}

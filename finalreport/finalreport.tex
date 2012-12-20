@@ -179,67 +179,49 @@ No meal is complete without a drink; and from Diet Coke to low-fat milk to fresh
 
 %\include{B_ProblemStatement}
 
+%PROBLEM STATEMENT
+
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Problem Statement}
 
-Selling soft drinks is a significant portion of McDonald's business, be it as a thirst quencher, or as part of the extra value meal. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or overly cold drink for the customer. This is likely to lower overall customer satisfaction, since a drink is a significant complement to a meal. Thus, customers are likely to appreciate if the right amount of ice was added for optimal satisfaction.
-\\* To further define this problem, the exogenous variables are the proportion of ice to put in a drink. The endogenous variable would be the resulting temperature and concentration of the drink, as we are assuming that a customer's satisfaction is affected only by the temperature and concentration of the drink.
+Selling soft drinks is a significant portion of McDonald's business, be it as a thirst quencher, or as part of the extra value meal. The server is not accustomed to putting much thought in measuring the amount of ice put in the cup. This often results in a overly diluted, overly concentrated or overly cold drink for the customer. This is likely to lower overall customer satisfaction, since a drink is a significant complement to a meal. Thus, customers are likely to appreciate if the right amount of ice was added for optimal satisfaction. 
+\vspace{12pt}
+\newline
+To further define and clarify this problem, the what we are looking for is the amount of ice to put in a drink. The factors that we would be looking at are the resulting temperature and concentration of the drink, given that we are assuming that a customer's satisfaction is affected only by the temperature and concentration of the drink.
+\vspace{12pt}
+\newline
 
-%\include{C_TechnicalBackground}
-
-\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\prefacesection{Technical Background}
-To aid us in our analysis of the experiment that we plan to do, we will be using the Pearson's chi-squared test to test how significant our experiment results are. It tests a null hypothesis stating that the frequency distribution of certain events observe in a sample is consistent with a particular theoretical distribution. The events must be mutually exclusive and have total probability one.
-\\*The Pearson's chi-squared test is used to assess two types of comparisons: tests of goodness of fit and tests of independence. Ths first step is to calculate the chi-squared statistic $ X^2$, which resembles a normalized sum of squared deviations between observed and theoretical frequencies, as shown in Equation \eqref{chisqstat}
-\begin{align}
-X^2 &= \sum_{i=1}^{n} {\frac{(O_{i}-E_{i})^2}{E_{i}}} \label{chisqstat}
-\end{align}
-
-where $O_{i}$ is the observed frequency of category i being chosen,
-\\*$E_{i}$ is the expected theoretical frequency of category i being chosen,
-\\*$n$ is the number of different categories,
-
-\vskip3pt The second step is to determine the degrees of freedom, $d$, of that statistic, which is essentialy the number of frequencies reduced by the number of parameters of the fitted distribution. In the third step, $X^2$ is compared to the critical value of no significaned from the $\chi_{d}^{2}$ distribution, which usually gives a good approximation fo the distribution of $X^2$.
-\\* By comparing the $X^2$ statistic calculated in Equation \eqref{chisqstat} to the appropiate $\chi^{2}$distribution with $d$ degrees of freedom, we will obtain a p-value. The p-value is the probability of obtaining a test statistic at least as extrememas the one that is actually observed, assuming the null hypothesis is true.
-\vskip6pt $H_0$: All n categories are chosen with equal probability
-\vskip3pt $H_a$: All n ncateogires are chosen with unequal probability.
-\vskip6pt If the p-value is greater than a given $\alpha$, it means that the result is not that extremem assuming the null hypothesis is true. Thus, there is insufficient evidence to reject the null hypothesis that all n categories are chosen with equal probability. However, if the p-value is greater than $\alpha$, it means that observed result is too extreme assuming the null hypothesis is true. Thus, we have sufficient evidence to reject the null hypothesis and accept the alternative hypothesis.
-\vskip6pt
-While carrying out this test, we have to be wary of 2 statistical errors : Type I and Type II errors. Type I error is the incorrect rejection of a true null hypothesis (a false positive). The probaility of a Type I error is equal to the $\alpha$ that we use. Most statistical test usually use 0.05 for its $\alpha$. Type II error is seen as a false negative, where we accept the null hypothesis when it is not true. The probability of a Type II error is usually denoted by $\beta$. The power of a test is $1-\beta$.
-\vskip6pt
-There are a few assumptions in place when using the chi-squared test.
-\begin{itemize}
-\item The sample data is a simple random sample from a fixed distribution or population where each member of the population has an equal probability of selection. We have tried to achieve this assumption as much as possible by ensuring our sample group is as representative of the population by choosing test subjects from different backgrounds.
-\item Sample size is sufficiently big. This is to avoid committing a Type II error.
-\item Observations are assumed to be independent of each other. There is no correlation between the test subject's preferences in any way.
-
-
-\end{itemize}
-
-
-%\include{D_Methods}
+%APPROACH 
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\prefacesection{Methods}
+\prefacesection{Approach}
 
-Firstly, we have a few assumptions on hand in order to simplify this problem. We assume that the consumer's taste depends entirely on the dilution and temperature of the drink. Since both the dilution and temperature of the drink rely entirely on the ice proportion, these two values would come hand-in-hand. Also, any sample group that we use represents the population's preferences accurately. Only a similar note, the 4 different time parameterrs which we perform the experiment is sufficient to represent the overall satisfaction the customer has with the drink.
-\\* We are interested in approaching this problem using 2 different methods. The first method would be experimenting with the 4 most popular types of soda at McDonald's, namely Coca Cola, Fanta Orange, Sprite and Diet Coke. Then we would experiment and gauge the satisfaction of the test subjects by experimenting with different amounts of ice to find out the optimal proportion of ice to soda. 
-\\* This experiment will take place over the course of 4 days, where we will each drink will be tested on each day. For each time parameter, we will give the test subject 3 different cups (labelled A, B and C) with different ice proportions in them (40\%, 60\%, 75\%). The ice will be left in the drink for time parameter t, and then the test subject will drink the 3 different cups, and indicate their preference by ranking the cups (3 is their favorite cup, and 1 is their least favorite cup). There will be 4 similar tests done on the same day but with a different time parameter t. These 4 experiments will be scheduled an hour apart from each other, so there will be no aftereffect or bias from the previous experiment. 
-The 4 different time parameters t will be t=0.5 minutes, t=2 minutes, t=5 minutes, t=30 minutes, which indicates the time elapsed after the ice is mixed with the drink. The test subject is allowed to sip the drink at time=t, assuming the ice is placed in the drink at t=0. We will tabulate the preferences of the entire sample group, and provide a conclusion about the consumer's preferred ice proportion in each soda drink.
-This will be a blind test and the subject will not know which ice proportions cups A, B and C will have (it will be random every round). \pagebreak
+
+Firstly, we have a few assumptions. We assume that the consumer's taste depends entirely on the dilution and temperature of the drink. Since both the dilution and the temperature of the drink rely entirely on the ice proportion, these values highly correlated. We also assume that the sample group represents the population's preferences. Finally, we assume that the 4 different time parameters, on which we perform the experiment, is sufficient to represent the overall satisfaction the customer has with the drink.
+\vspace{12pt}
+\newline
+We are interested in approaching this problem using 2 different methods. The first method would be experimenting with the 4 most popular types of soda at McDonald's, namely Coca Cola, Fanta Orange, Sprite and Diet Coke. Then we would experiment and gauge the satisfaction of the test subjects by experimenting with different amounts of ice to find out the optimal proportion of ice to soda. 
+\vspace{12pt}
+\newline
+We perform this experiment on 12 individual subjects. The 4 carbonated drinks used are Coke, Sprite, Fanta Orange and Diet Coke. For each drink, we surveyed and recorded their preferences for 3 different proportions of ice (labelled A - 40\%, B - 60\%, C - 75\%), at each time parameter. The 4 different time parameters $t$ are $t$ = 0.5 minutes, $t$=2 minutes, $t$=5 minutes, $t$=30 minutes, which indicates the time elapsed after the ice is mixed with the drink. The test subject is allowed to sip the drink at time = $t$, assuming the ice is placed in the drink at $t$ = 0. 
+\vspace{12pt}
+\newline
+For each drink, the test subject will drink from the 3 different cups at time $t$, and indicate their preference by ranking the cups using a points system, where they put 3 for their most preferred drink, 2 for the second and 1 as their least preferred drink. This survey is repeated as time elapses, from $t$ = 0, all the way until $t$ = 30 minutes. The tables below represent the smaple forms that the participants fill out in our experiment. 
+
+\pagebreak
 \vspace{2pt}
 \begin{table}[ h]
 \centering
 \begin{tabular}{ l | c|c|c }
   Ice Proportion & A  & B & C  \\
 \hline  
-t=0.5mins & & &\\ 
+$t$ = 0.5 mins & & &\\ 
 \hline  
-t=2mins & & &\\ 
+$t$ = 2 mins & & &\\ 
 \hline  
-t=5mins  & & &\\ 
+$t$ = 5 mins  & & &\\ 
 \hline  
-t=30mins & & &\\ 
+$t$ = 30 mins & & &\\ 
 \hline  
    
  \end{tabular}
@@ -252,107 +234,146 @@ t=30mins & & &\\
 \begin{tabular}{ l | c|c|c }
   Ice Proportion & A  & B & C  \\
 \hline  
-t=0.5mins & 3&2 &1\\ 
+$t$ = 0.5 mins & 3&2 &1\\ 
 \hline  
-t=2mins &1 &3 &2\\ 
+$t$ = 2 mins &1 &3 &2\\ 
 \hline  
-t=5mins  &2 &3 &1\\ 
+$t$ = 5 mins  &2 &3 &1\\ 
 \hline  
-t=30mins &1 &2 &3\\ 
+$t$ = 30 mins &1 &2 &3\\ 
 \hline  
    
  \end{tabular}
-\caption{Example of a response by a test subject}
+\caption{A completed sample form}
 
 \end{table}
+
+To aid us in our analysis of the experiment that we plan to do, we will be using Pearson's chi-squared test to test how significant our experiment results are. It tests a null hypothesis stating that the frequency distribution of certain events observe in a sample is consistent with a particular theoretical distribution. The events must be mutually exclusive and have total probability one.
+\vspace{12pt}
+\newline
+The Pearson's chi-squared test is used to assess two types of comparisons: tests of goodness of fit and tests of independence. Ths first step is to calculate the chi-squared statistic $ X^2$, which resembles a normalized sum of squared deviations between observed and theoretical frequencies, as shown in Equation \eqref{chisqstat} 
+\begin{align}
+X^2 &= \sum_{i=1}^{n} {\frac{(O_{i}-E_{i})^2}{E_{i}}} \label{chisqstat}
+\end{align}
+
+where:
+\newline
+\\*$O_{i}$ is the observed frequency of category i being chosen,
+\\*$E_{i}$ is the expected theoretical frequency of category i being chosen,
+\\*$n$ is the number of different categories,
+\vspace{12pt}
+\newline
+The second step is to determine the degrees of freedom, $d$, of that statistic, which is essentialy the number of frequencies reduced by the number of parameters of the fitted distribution. In the third step, $X^2$ is compared to the critical value of no significane from the $\chi_{d}^{2}$ distribution, which usually gives a good approximation fo the distribution of $X^2$.
+\vspace{12pt}
+\newline
+By comparing the $X^2$ statistic calculated in Equation \eqref{chisqstat} to the appropiate $\chi^{2}$distribution with $d$ degrees of freedom, we will obtain a p-value. The p-value is the probability of obtaining a test statistic at least as extrememas the one that is actually observed, assuming the null hypothesis is true.
 \vspace{6pt}
+\newline
+$H_0$: All n categories are chosen with equal probability
+\\*  $H_a$: All n cateogires are chosen with unequal probability.
+\vspace{12pt}
+\newline
+If the p-value is greater than a given $\alpha$, it means that the result is not that extreme assuming the null hypothesis is true. Thus, there is insufficient evidence to reject the null hypothesis that all n categories are chosen with equal probability. However, if the p-value is greater than $\alpha$, it means that observed result is too extreme assuming the null hypothesis is true. Thus, we have sufficient evidence to reject the null hypothesis and accept the alternative hypothesis.
+\vspace{12pt}
+\newline
+While carrying out this test, we have to be wary of 2 statistical errors : Type I and Type II errors. Type I error is the incorrect rejection of a true null hypothesis (a false positive). The probaility of a Type I error is equal to the $\alpha$ that we use. Most statistical test usually use 0.05 for its $\alpha$. Type II error is seen as a false negative, where we accept the null hypothesis when it is not true. The probability of a Type II error is usually denoted by $\beta$. The power of a test is $1-\beta$.
+\vspace{12pt}
+\newline
+There are a few assumptions in place when using the chi-squared test.
+\begin{itemize}
+\item The sample data is a simple random sample from a fixed distribution or population where each member of the population has an equal probability of selection. We have tried to achieve this assumption as much as possible by ensuring our sample group is as representative of the population by choosing test subjects from different backgrounds.
+\item Sample size is sufficiently big. This is to avoid committing a Type II error.
+\item Observations are assumed to be independent of each other. There is no correlation between the test subject's preferences in any way.
+\end{itemize}
+As stated earlier, the rationale for using these statistical tests is to ensure that the data we collect show a clear trend or inclination of the subject to choose between the 40\%, 60\% and 75\% quantities of ice, in order for us to accept it. 
 
- We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. This would not really tell us anything about preference of the population, but if provides more of a perspective on how different ice proportions affect temperatures and dilutions. However, this is purely theoretical since it does not take into account heat loss to the environment and cup. This will be mainly a supporting tool and not used in place of the first approach.
+\vspace{12pt}
 
+We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. This would not really tell us anything about preference of the population, but if provides more of a perspective on how different ice proportions affect temperatures and dilutions. However, this is purely theoretical since it does not take into account heat loss to the environment and cup. This will be mainly a supporting tool and not used in place of the first approach.
 
 %\include{E_Results}
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\prefacesection{Results}
+\prefacesection{Results and analysis}
 \vspace{6pt}
 
 \begin{table}[ h]
 \centering
-\begin{tabular}{ l || c|c|c }
-  &40\% &60\% & 75\%  \\
+\begin{tabular}{ l || c|c|c||c|c }
+  &40\% &60\% & 75\% &p-value &significance? \\
 \hline  
-t=0.5 mins & 15 & 25 & 32\\ 
+$t$ = 0.5 mins & 15 & 25 & 32 & 0.047&significant\\ 
 \hline  
-t=2 mins & 14 & 24 & 34\\ 
+$t$ = 2 mins & 14 & 24 & 34&0.016&significant\\ 
 \hline  
-t=5 mins & 14 & 27 & 31\\ 
+$t$ = 5 mins & 14 & 27 & 31&0.037&significant\\ 
 \hline  
-t=30 mins & 18 & 36 & 18\\ 
-\hline  
-   
+$t$ = 30 mins & 18 & 36 & 18&0.011&significant\\ 
+\hline
+Sum of significant rows & 61 & 112 & 115 & & \\ 
+\hline     
  \end{tabular}
-
 \caption{Experiment results for Coke}
-
 \end{table}
 
 \begin{table}[ h]
 \centering
-\begin{tabular}{ l || c|c|c }
-  &40\% &60\% & 75\%  \\
+\begin{tabular}{ l || c|c|c||c|c }
+  &40\% &60\% & 75\% &p-value &significance? \\
 \hline  
-t=0.5 mins & 15 & 27 & 30\\ 
+$t$ = 0.5 mins & 15 & 27 & 30&0.072&not significant\\ 
 \hline  
-t=2 mins & 20 & 19 & 33\\ 
+$t$ = 2 mins & 20 & 19 & 33&0.079&not significant\\ 
 \hline  
-t=5 mins & 14 & 29 & 29\\ 
+$t$ = 5 mins & 14 & 29 & 29&0.044&significant\\ 
 \hline  
-t=30 mins & 17 & 30 & 25\\ 
+$t$ = 30 mins & 17 & 30 & 25&0.011&significant\\ 
 \hline  
-   
- \end{tabular}
+Sum of significant rows & 31 & 59 & 54 & & \\ 
+\hline     
 
+ \end{tabular}
 \caption{Experiment results for Sprite}
-
 \end{table}
+
 \begin{table}[ h]
 \centering
-\begin{tabular}{ l || c|c|c }
-  &40\% &60\% & 75\%  \\
+\begin{tabular}{ l || c|c|c||c|c }
+  &40\% &60\% & 75\% &p-value &significance? \\
 \hline  
-t=0.5 mins & 15 & 23 & 34\\ 
+$t$ = 0.5 mins & 15 & 23 & 34&0.022&significant\\ 
 \hline  
-t=2 mins & 19 & 23 & 30\\ 
+$t$ = 2 mins & 19 & 23 & 30&0.275&not significant\\ 
 \hline  
-t=5 mins & 18 & 27 & 27\\ 
+$t$ = 5 mins & 18 & 27 & 27&0.325&not significant\\ 
 \hline  
-t=30 mins & 12 & 35 & 25\\ 
-\hline  
-   
+$t$ = 30 mins & 12 & 35 & 25&0.004&significant\\ 
+\hline     
+Sum of significant rows & 27 & 58 & 59 & & \\ 
+\hline     
  \end{tabular}
-
 \caption{Experiment results for Fanta Orange}
-
 \end{table}
+
 \begin{table}[ h]
 \centering
-\begin{tabular}{ l || c|c|c }
-  &40\% &60\% & 75\%  \\
+\begin{tabular}{ l || c|c|c||c|c }
+  &40\% &60\% & 75\% &p-value &significance? \\
 \hline  
-t=0.5 mins & 15 & 24 & 33\\ 
+$t$ = 0.5 mins & 15 & 24 & 33&0.034&significant\\ 
 \hline  
-t=2 mins & 21& 19 & 32\\ 
+$t$ = 2 mins & 21& 19 & 32&0.130 &not significant\\ 
 \hline  
-t=5 mins & 16 & 24 & 32\\ 
+$t$ = 5 mins & 16 & 24 & 32&0.069&not significant\\ 
 \hline  
-t=30 mins & 18 & 22& 32\\ 
+$t$ = 30 mins & 18 & 22& 32&0.115&not significant\\ 
 \hline  
-   
+Sum of significant rows & 15 & 24 & 33 & & \\ 
+\hline     
  \end{tabular}
-
 \caption{Experiment results for Diet Coke}
-
 \end{table}
+
 \begin{table}[ h]
 \centering
 \begin{tabular}{ l || c|c}
@@ -372,129 +393,48 @@ t=30 mins & 18 & 22& 32\\
 \caption{Calculated dilution and temperature for difference ice volumes}
 \end{table}
 
-%\include{F_Analysis}
+\newpage
 
-\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\prefacesection{Analysis}
-
-We run the Pearson's chi-squared test on the results that we have obtain with the following null hypothesis.
+We run the Chi-squared test on the results that we have to obtained, with the following null hypotheses:
 \vskip6pt $H_0$: The 3 different proportions are desired to an equal extent by the population.
 \vskip3pt $H_a$: The 3 different proportions are not desired to an equal extent by the population.
 \vskip6pt
-
-Since there are 72 points to be awarded (12 test subjects can give 6 points each), the expected score of each cup should be 72/3 = 24. These will be the $E_i$ for each of the 3 categories. Using Equation \eqref{chisqstat} and comparing it to a $\chi^2$ distribution with 2 degress of freedom, we can obtain a p-value. We choose $l\alpha$ to be 0.05. For a certain category, if the p-value is smaller than 0.05, the result is significant and we can reject the null hypothesis. Otherwise, the result is not significant and we do not reject the null hypothesis for that category.
-
-To compute the p-value we use the following R code in Listing \ref{chisq}
+\vspace{12pt}
+Since there are 72 points to be awarded (the 12 test subjects give 6 points each), the expected score of each cup should be 72/3 = 24. These will be the $E_i$ for each of the 3 categories. Using Equation \eqref{chisqstat} and comparing it to a $\chi^2$ distribution with 2 degress of freedom, we can obtain a p-value. We choose $l\alpha$ to be 0.05. For a certain category, if the p-value is smaller than 0.05, the result is significant and we can reject the null hypothesis. Otherwise, the result is not significant and we do not reject the null hypothesis for that category.
+\vspace{12pt}
+\newline
+To compute the p-value, we use the following R code in Listing \ref{chisq}
 \begin{lstlisting}[caption= R code for chi-squared test, label=chisq]
 x=c(a,b,c) #a,b,c represents the 3 data points for each time parameter and drink
 chisq.test(x)
 \end{lstlisting}
-
-
-\begin{table}[ h]
-\centering
-\begin{tabular}{ l || c|c|c||c|c }
-  &40\% &60\% & 75\% &p-value &significance? \\
-\hline  
-t=0.5 mins & 15 & 25 & 32 & 0.047&significant\\ 
-\hline  
-t=2 mins & 14 & 24 & 34&0.016&significant\\ 
-\hline  
-t=5 mins & 14 & 27 & 31&0.037&significant\\ 
-\hline  
-t=30 mins & 18 & 36 & 18&0.011&significant\\ 
-\hline
-Sum of significant rows & 61 & 112 & 115 & & \\ 
-\hline     
- \end{tabular}
-\caption{Experiment results for Coke}
-\end{table}
-
-\begin{table}[ h]
-\centering
-\begin{tabular}{ l || c|c|c||c|c }
-  &40\% &60\% & 75\% &p-value &significance? \\
-\hline  
-t=0.5 mins & 15 & 27 & 30&0.072&not significant\\ 
-\hline  
-t=2 mins & 20 & 19 & 33&0.079&not significant\\ 
-\hline  
-t=5 mins & 14 & 29 & 29&0.044&significant\\ 
-\hline  
-t=30 mins & 17 & 30 & 25&0.011&significant\\ 
-\hline  
-Sum of significant rows & 31 & 59 & 54 & & \\ 
-\hline     
-
- \end{tabular}
-\caption{Experiment results for Sprite}
-\end{table}
-
-\begin{table}[ h]
-\centering
-\begin{tabular}{ l || c|c|c||c|c }
-  &40\% &60\% & 75\% &p-value &significance? \\
-\hline  
-t=0.5 mins & 15 & 23 & 34&0.022&significant\\ 
-\hline  
-t=2 mins & 19 & 23 & 30&0.275&not significant\\ 
-\hline  
-t=5 mins & 18 & 27 & 27&0.325&not significant\\ 
-\hline  
-t=30 mins & 12 & 35 & 25&0.004&significant\\ 
-\hline     
-Sum of significant rows & 27 & 58 & 59 & & \\ 
-\hline     
- \end{tabular}
-\caption{Experiment results for Fanta Orange}
-
-\end{table}
-
-\begin{table}[ h]
-\centering
-\begin{tabular}{ l || c|c|c||c|c }
-  &40\% &60\% & 75\% &p-value &significance? \\
-\hline  
-t=0.5 mins & 15 & 24 & 33&0.034&significant\\ 
-\hline  
-t=2 mins & 21& 19 & 32&0.130 &not significant\\ 
-\hline  
-t=5 mins & 16 & 24 & 32&0.069&not significant\\ 
-\hline  
-t=30 mins & 18 & 22& 32&0.115&not significant\\ 
-\hline  
-Sum of significant rows & 15 & 24 & 33 & & \\ 
-\hline     
- \end{tabular}
-\caption{Experiment results for Diet Coke}
-\end{table}
-
-
+\vspace{12pt}
 Tables 8, 9 ,10 and 11 shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively, but now with two added columns: the p-value, and the significance. As before, the rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
-
+\vspace{12pt}
+\newline
 The p-value is calculated using the Chi-Squared Test. The Chi-squared test is a statistical hypothesis test in which the sampling distribution of the test statistic is considered significant when the null hypothesis is true. The alternative hypothesis in this case is that the respondents (our test subjects) are \emph{indifferent} between the percentages of the cup being filled with ice. This means that 1/3 of respondents choose 40\%, 1/3 of the responsdents choose 60\% and the final 1/3 choose 75\% - as a whole subject population, they do not care how much ice is put in the cup. The null hypothesis is that there exists a bias, or a tendency towards one percentage than another. This null hypothesis would mean that we can observe a clear trend in the data being shown, and thus we can use the data presented. 
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 The significance threshold being used here is 0.05\%. This means that if the p-value calculated is less than 0.05, we can accept null hypothesis, and the data is considered significant. If the p-value calculated is greater than 0.05, we can reject the null hypothesis, and the data is considered less significant. 
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. 
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 At t = 0.5 minutes, it is obvious that the cup with the most amount of ice, at 75\% of the cup filled (not by volume but by height of the cup), gave the subjects the most satisfaction. This is likely because, at 30 seconds after the soda is mixed with the ice, the soda is chilled the fastest with the most ice, and little dilution occurs. Given that the sodas are not watered down by dilution yet, subjects enjoy the coldest of drinks, which in this case is the one with the most ice. 
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 At t = 2 minutes, there is a less clear trend, but generally the subjects still prefer 75\% as compared to 40\% or 60\%. This is reasonable, given that the ice still has not diluted much, and the most ice would still chill the drink the most and provide the most satisfaction. 
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 At t = 5 minutes, we see a split preference between 60\% and 75\%. At 5 minutes, more of the ice has dissolved, and dilution in both cups are likely the same given that their temperatures are also roughly equal. The continued low satisfaction for 40\% is likely due to the lack of chilling effect of this low quantity of ice.
-
-\vspace{6pt}
+\vspace{12pt}
+\newline
 At t = 30 minutes, we can assume that much of the ice have dissolved, and the resulting dilution from the ice is very high. The more ice there is, the more diluted the soda is. Thus we see a decline in satisfaction for the 75\% cup. It is still more satisfying than the 40\% cup, probably because it still manages to maintain its coldness, whereas the 40\% cup is likely to be less chilled. 
 
 
 \newpage
-Theoretical Analysis
+
 
 \begin{table}[ h]
 \centering
@@ -522,8 +462,13 @@ Theoretical Analysis
 \end{figure}
 
 \vspace{12pt}
-Using the lemmas under Appendix A, we are able to calculate the final temperature and dilution. This is assuming we have the ratio of the volume of ice to soda. This is a different measuring scale from the experimental-based approach. In the experimental-based approach, the percentage is based on the height of a standard regular McDonald's cup. However, in this approach, we are using the ratio as exact absolute volume. Thus, we first calculate how much energy it would take to melt the ice, and see how many degrees it would lower the temperature of the drink by. Then, we calculate what is the temperature that the soda and melted ice would eventually converge to. Also, the dilution is calculated by finding the resulting volume of the melted ice (since ice has a lower density than water), and dividing that by the amount of soda.
 
+Theoretical Analysis
+\vspace{12pt}
+\newline
+Using the lemmas under Appendix A, we are able to calculate the final temperature and dilution. This is assuming we have the ratio of the volume of ice to soda. This is a different measuring scale from the experimental-based approach. In the experimental-based approach, the percentage is based on the height of a standard regular McDonald's cup. However, in this approach, we are using the ratio as exact absolute volume. Thus, we first calculate how much energy it would take to melt the ice, and see how many degrees it would lower the temperature of the drink by. Then, we calculate what is the temperature that the soda and melted ice would eventually converge to. Also, the dilution is calculated by finding the resulting volume of the melted ice (since ice has a lower density than water), and dividing that by the amount of soda.
+\vspace{12pt}
+\newline
 Figure 1 is generated by plotting the data from table 12. These basically show a more theoretical approach, which asserts that as more ice is put in the soda, the temperature is further decreased, but the dilution is increased. This take-away from this theoretical result is congruent to those of our experimental results.  This analysis, and the generated trendline, is important because if our sponsor decides on a certain volume of ice to soda proportion and would like to find out the dilution and temperature effects, we can extropolate and further provide the desired calculations. 
 
 %\include{G_Conclusion}
