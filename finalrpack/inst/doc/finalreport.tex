@@ -290,7 +290,7 @@ As stated earlier, the rationale for using these statistical tests is to ensure 
 
 \vspace{12pt}
 
-We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. This would not really tell us anything about preference of the population, but if provides more of a perspective on how different ice proportions affect temperatures and dilutions. However, this is purely theoretical since it does not take into account heat loss to the environment and cup. This will be mainly a supporting tool and not used in place of the first approach.
+\noindent We would also be looking to approach this problem from an alternative, and supplementary, method. The second method would be using physics-based modeling. Utilizing the specific heat capacities of soda and ice (already found as specific values), we can calculate the different temperatures and dilution that the resulting drink will be. This would not really tell us anything about preference of the population, but if provides more of a perspective on how different ice proportions affect temperatures and dilutions. However, this is purely theoretical since it does not take into account heat loss to the environment and cup. This will be mainly a supporting tool and not used in place of the first approach.
 
 %\include{E_Results}
 
@@ -402,26 +402,22 @@ Total & 134 & 253 & 261  \\
 
 \newpage
 
-We run the Chi-squared test on the results that we have to obtained, with the following null hypotheses:
+\noindent We run the Chi-squared test on the results that we have to obtained, with the following null hypotheses:
 \vskip6pt $H_0$: The 3 different proportions are desired to an equal extent by the population.
 \vskip3pt $H_a$: The 3 different proportions are not desired to an equal extent by the population.
 \vskip6pt
 \vspace{12pt}
-Since there are 72 points to be awarded (the 12 test subjects give 6 points each), the expected score of each cup should be 72/3 = 24. These will be the $E_i$ for each of the 3 categories. Using Equation \eqref{chisqstat} and comparing it to a $\chi^2$ distribution with 2 degress of freedom, we can obtain a p-value. We choose $l\alpha$ to be 0.05. For a certain category, if the p-value is smaller than 0.05, the result is significant and we can reject the null hypothesis. Otherwise, the result is not significant and we do not reject the null hypothesis for that category.
+
+\noindent Since there are 72 points to be awarded (the 12 test subjects give 6 points each), the expected score of each cup should be 72/3 = 24. These will be the $E_i$ for each of the 3 categories. Using Equation \eqref{chisqstat} and comparing it to a $\chi^2$ distribution with 2 degress of freedom, we can obtain a p-value. We choose $l\alpha$ to be 0.05. For a certain category, if the p-value is smaller than 0.05, the result is significant and we can reject the null hypothesis. Otherwise, the result is not significant and we do not reject the null hypothesis for that category. To compute the p-value, we use the R code in Listing \ref{chisq}
+
 \vspace{12pt}
-\newline
-To compute the p-value, we use the following R code in Listing \ref{chisq}
-\begin{lstlisting}[caption= R code for chi-squared test, label=chisq]
-x=c(a,b,c) #a,b,c represents the 3 data points for each time parameter and drink
-chisq.test(x)
-\end{lstlisting}
-\vspace{12pt}
-Tables \ref{Coke}, \ref{Sprite} ,\ref{FantaOrange} and \ref{DietCoke} shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively, but now with two added columns: the p-value, and the significance. As before, the rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
+\noindent Tables \ref{Coke}, \ref{Sprite} ,\ref{FantaOrange} and \ref{DietCoke} shows the poll results for the four different drinks of Coke, Sprite, Fanta Orange, and Diet Coke respectively, but now with two added columns: the p-value, and the significance. As before, the rows represent the poll results taken after 0.5 minutes, 2 minutes, 5 minutes and 30 minutes; the columns represent the percentage of the cup filled (not by volume but by height of the cup). Each subject is asked to rank their preference of the amount of ice from 1 - 3 at each point in time, 3 being the most enjoyable cup and 1 being the least enjoyable cup. These preferences are collected and summed, and shown in the tables. For each row, the higher the number, the more satisfactory the subject is at that point in time. 
 \vspace{12pt}
 \newline
 The p-value is calculated using the Chi-Squared Test. The Chi-squared test is a statistical hypothesis test in which the sampling distribution of the test statistic is considered significant when the null hypothesis is true. The alternative hypothesis in this case is that the respondents (our test subjects) are \emph{indifferent} between the percentages of the cup being filled with ice. This means that 1/3 of respondents's preferences are allocated to  40\%, 1/3 to 60\% and the final 1/3 to 75\% - as a whole subject population, the assigned preferences (in terms of the point system) do not indicate a preference towards how much ice is put in the cup. The null hypothesis is that there exists no bias, no tendency towards one percentage than another. This null hypothesis would mean that we are not able to observe a clear trend in the data being shown, and thus we are not able to use the data presented. 
 \vspace{12pt}
 \newline
+\noindent Table \ref{ExpTotal} shows the compiled set of preferences for each soda. To get this table,  we summed up the preferences of each soda at each point in time ($t$ = 0.5, 2, 5, 30 minutes), but taking into account only those data points that are considered significant. The sum of the preferences in this table are not equal for every drink. For example, in the diet coke row, the numbers are 15, 24, 33, totaling 73. While for the coke row the numbers are 61, 112, 115, totaling 288. The reason they are different is because coke had more data points that were considered significant, as compared to Diet Coke, which had less data points that were considered significant. This allows us to measure only \emph{clear} trends in the data, and hence scrutinize those specific instances that exhibit an evident preference towards one amount of ice over another. 
 Based on our experimental results collected, we can see a relatively clear trend across all four drinks at each point in time. 
 \vspace{12pt}
 \newline
@@ -437,8 +433,8 @@ At $t$ = 5 minutes, we see a split preference between 60\% and 75\%. At 5 minute
 At $t$ = 30 minutes, we can assume that much of the ice have dissolved, and the resulting dilution from the ice is very high. The more ice there is, the more diluted the soda is. Thus we see a decline in satisfaction for the 75\% cup. It is still more satisfying than the 40\% cup, probably because it still manages to maintain its coldness, whereas the 40\% cup is likely to be less chilled. 
 
 
-\newpage
 
+\newpage
 
 \begin{table}[ h]
 \centering
@@ -477,34 +473,53 @@ Using the lemmas under Appendix A, we are able to calculate the final temperatur
 \newline
 Figure \ref{DilTempGraph} is generated by plotting the data from Table \ref{DilTempTable}. These basically show a more theoretical approach, which asserts that as more ice is put in the soda, the temperature is further decreased, but the dilution is increased. This take-away from this theoretical result is congruent to those of our experimental results.  This analysis, and the generated trendline, is important because if our sponsor decides on a certain volume of ice to soda proportion and would like to find out the dilution and temperature effects, we can extropolate and further provide the desired calculations. 
 
+
 %\include{G_Conclusion}
 
 %\ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \prefacesection{Conclusion}
 
-\vspace{24pt}
-\noindent Table \ref{ExpTotal} shows the compiled set of preferences for each soda. To get this table,  we summed up the preferences of each soda at each point in time ($t$ = 0.5, 2, 5, 30 minutes), but taking into account only those data points that are considered significant. This allows us to measure only \emph{clear} trends in the data, and hence scrutinize those specific instances that exhibit an evident preference towards one amount of ice over another. 
 
 \vspace{12pt}
-\noindent From this table, we can see that across all sodas, there is a clear disinclination towards the cup being filled 40\% with ice. Yet between 60\% or 75\%, there is no clear 'winner' either. However, we know that subjects prefer the cup with more ice if they are to finish their drink quickly, and less ice if they are going to keep the drink for a while. Based on the data and analysis performed \emph{in this experiment alone}, we can conclude that in filling a soda cup, customers, on average, prefer a cup filled with 75\% of ice if they intend to drink it in the short term, but prefer a cup filled with 60\% of ice if they intend to drink it in the long term.
+\noindent From table \ref{ExpTotal}, we can see that across all sodas, there is a clear disinclination towards the cup being filled 40\% with ice. Yet between 60\% or 75\%, there is no clear 'winner' either. However, we know that subjects prefer the cup with more ice if they are to finish their drink quickly, and less ice if they are going to keep the drink for a while. Based on the data and analysis performed \emph{in this experiment alone}, we can conclude that in filling a soda cup, customers, on average, prefer a cup filled with 75\% of ice if they intend to drink it in the short term, but prefer a cup filled with 60\% of ice if they intend to drink it in the longer term. 
 
-%\include{chapter1}
-%\include{chapter2}
-%\include{chapter3}
-%\include{chapter4}
-%\include{chapter5}
-%\include{chapter6}
+\vspace{12pt}
+\noindent As promised in our work statement, the Matlab code used to calculate the resulting temperature and dilution is included in \ref{matlab}. The data and documentations are done and recorded in R, which are also attached in this project's submission file. The numerical experiment results reporting success rate of different ice proportions are the survey results, as tabulated in tables \ref{Coke}, \ref{Sprite}, \ref{FantaOrange} and \ref{DietCoke}. Finally, we have the following table of optimal ice proportions for each different type of soda:
+\vspace{6pt}
+\begin{table}[ h]
+\centering
+\begin{tabular}{ l || c}
+ Soda & Optimal Ice Proportion \\
+\hline  
+Coke & 75\% \\ 
+\hline  
+Sprite & 60\% \\ 
+\hline 
+Fanta Orange & 75\% \\ 
+\hline 
+Diet Coke & 75\% \\ 
+
+\end{tabular}
+\caption{Optimal ice proportions for different sodas}
+\label{FinalTable}
+\end{table}
 
 
+%%% APPENDIX
 \appendix
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 
 \chapter{Lemmas}\label{Lemma}
 \vspace{12pt} 
 
-Thermal Energy Equation:
+Specific Heat Capacity Equation:
+
 \begin{align}
-q=mC\Delta{}T 
+C= \dfrac{q}{m\Delta{}T} 				\label{SpecHC1}
+\end{align}
+
+\begin{align}
+q=mC\Delta{}T \label{SpecHC2}
 \end{align}
 
 \noindent where,
@@ -514,30 +529,35 @@ q=mC\Delta{}T
 \\* \indent $\Delta$T= change in temperature (Celcius)
 
 \vspace{24pt}
-\noindent Rearranged:
-\begin{align}
-C= q/(m*\Delta{} T) \label{SHC}
-\end{align}
 
-\noindent The value of C, given by \ref{SHC}, 
+\noindent This equation \eqref{SpecHC1} allows us to determine an object's specific heat capacity, C, which is the amount of heat per unit mass required to raise the temperature by one degree Celsius. Rearraged, we get \eqref{SpecHC2}, which then allows us, in our theoretical analysis, to determine the temperature change in the soda from the melting ice. 
 
-
+%%% GLOSSARY
 \chapter{Glossary}\label{Glossary}
 
-\vspace{12pt}
-
-
-\noindent Specific heat capacity. 
-\indent Amount of heat per unit mass required to raise the temperature by one degree Celsius
+\noindent Chi-Squared Test.
+\indent A statistical test that tests a null hypothesis stating that the frequency distribution of certain events observed in a sample is consistent with a particular theoretical distribution. 
 \vspace{12pt}
 
 \noindent Heat of fusion. 
-\indent Amount of heat needed to change its state from a solid to a liquid per unit mass
+\indent Amount of heat needed to change its state from a solid to a liquid per unit mass.
+\vspace{12pt}
+
+\noindent P-value.
+\indent The p-value is the probability of obtaining a test statistic at least as extrememas the one that is actually observed, assuming the null hypothesis is true.
+\vspace{12pt}
+
+\noindent Specific heat capacity. 
+\indent Amount of heat per unit mass required to raise the temperature by one degree Celsius. See \ref{SpecHC1}
+\vspace{12pt}
+
+\noindent Type I/II errors. 
+\indent Type I error is the incorrect rejection of a true null hypothesis (a false positive). Type II error is seen as a false negative, where we accept the null hypothesis when it is not true.
 
 
-
+%%% MATLAB CODE
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
-\chapter{Matlab code}\label{Matlab code}
+\chapter{Matlab code}\label{Matlab and R code}
 \begin{lstlisting}[caption= Matlab code for calculating resulting temperature and dilution, label = matlab]
 
 function [dilution, temp] = SHC(vsoda,vice, w )
@@ -564,6 +584,11 @@ temp=(t*vsoda*w-energymelt)/(watershc*vice+vsoda*w); %resulting temperature
 end
 \end{lstlisting}
 \vspace{5pt}
+\begin{lstlisting}[caption= R code for chi-squared test, label=chisq]
+x=c(a,b,c) #a,b,c represents the 3 data points for each time parameter and drink
+chisq.test(x)
+\end{lstlisting}
+
 
 \ifthenelse{\boolean{@twoside}}{\myclearpage}{}
 \chapter{R code}\label{R}
