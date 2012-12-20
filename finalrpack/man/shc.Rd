@@ -12,17 +12,17 @@ shc(20,1200,4.2)
   \item{w}{specific heat capacity of soda in J}
 }
 \details{
-\itemize
+\itemize{
 \item {Assume specfic heat capacity of water = 4.1813J/g/K}
 \item {Assume specific heat of fusion = 334J/g}
 \item{Assume ice is 0degrees Celsius, soda is 25 degrees Celsius}
-}
+}}
 \value{
-\itemize
+\itemize{
 \item {dilution is dilution of resulting solution}
 \item {temp is resulting temperature of solution in Celsius}
-}
-\references{\url http://hyperphysics.phy-astr.gsu.edu/hbase/tables/sphtt.html#c1, Accessed 1 December 2012
+}}
+\references{Georgia State University Department of Physics and Astronomy, http://hyperphysics.phy-astr.gsu.edu/hbase/tables/sphtt.html#c1, Accessed 1 December 2012
 }
 \author{Yen Theng Tan, Joyce Tan}
 \note{Final deliverable
@@ -32,4 +32,3 @@ shc(20,1200,4.2)
 \examples{
 shc(1200,200,4.2)
 
-\keyword{ Specific Heat Capacity}
