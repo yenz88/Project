@@ -22,7 +22,7 @@ shc(20,1200,4.2)
 \item {dilution is dilution of resulting solution}
 \item {temp is resulting temperature of solution in Celsius}
 }
-\references{Georgia State University Department of Physics and Astronomy, http://hyperphysics.phy-astr.gsu.edu/hbase/tables/sphtt.html#c1, Accessed 1 December 2012
+\references{\url http://hyperphysics.phy-astr.gsu.edu/hbase/tables/sphtt.html#c1, Accessed 1 December 2012
 }
 \author{Yen Theng Tan, Joyce Tan}
 \note{Final deliverable
