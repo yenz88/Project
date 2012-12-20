@@ -6,11 +6,12 @@ function(vsoda,vice,w) {
   density=0.9167;
   t=25; 
   
-  vice=vice*density; %find mass of ice
-  dilution=vice/vsoda; %find dilution
-  energymelt=334*vice; %%find energy needed to melt ice
+  vice=vice*density; #find mass of ice
+  dilution=vice/vsoda; #find dilution
+  energymelt=334*vice; #find energy needed to melt ice
   
   temp=(t*vsoda*w-energymelt)/(watershc*vice+vsoda*w);
-  return(temp,dilution)
+  return(temp)
+  return(dilution)
   
   }

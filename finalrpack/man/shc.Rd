@@ -4,7 +4,7 @@
 \description{
 Returns dilution and temperature of resulting drink based based on volume of ice and soda, as well as specific heat capacity of soda}
 \usage{
-shc(20,1200,4.2)
+shc(vsoda,vice,w)
 }
 \arguments{
   \item{vsoda}{volume of soda in cm3, Assume density of soda is 1g/cm3}
@@ -31,4 +31,4 @@ shc(20,1200,4.2)
 \seealso{ }
 \examples{
 shc(1200,200,4.2)
-
+}
